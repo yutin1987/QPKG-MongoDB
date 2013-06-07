@@ -1,16 +1,9 @@
-QPKG-Drupal7 QuickSetup
+MongoDB
 =========
-Drupal /ˈdruːpəl/ is a free and open-source content management framework (CMF) written in PHP and distributed under the GNU General Public License.
+MongoDB (from "humongous") is an open-source document database, and the leading NoSQL database.
 
-Drupal Website: http://drupal.org
+MongoDB website: http://www.mongodb.org/
 
-Download: http://bit.ly/qpkg_drupal7_qs
-
-Install
-=========
-Step1. install the drupal7 qpkg
-
-Step2. goto the configure site
-       /drupal7_qs/install.php?profile=standard&locale=en
-
-Step3. finished
+Download:
+- [x86] http://bit.ly/qpkg_drupal7_qs
+- [arm] Unsupported
