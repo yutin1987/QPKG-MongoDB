@@ -15,25 +15,25 @@ case "$1" in
         exit 1
     fi
 
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongod
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongos
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongo
+    ln -nfs $QPKG_DIR/bin/mongod /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongos /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongo /opt/bin/
 
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongodump
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongorestore
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongoexport
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongoimport
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongofiles
-    ln -nfs /opt/bin/ $QPKG_DIR/bin/mongostat
+    ln -nfs $QPKG_DIR/bin/mongodump /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongorestore /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongoexport /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongoimport /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongofiles /opt/bin/
+    ln -nfs $QPKG_DIR/bin/mongostat /opt/bin/
 
     mkdir -p /mnt/ext/opt/mongo/db
     
-    mongod --dbpath=/mnt/ext/opt/mongo/db
+    mongod --dbpath=/mnt/ext/opt/mongo/db --fork --logpath /mnt/ext/opt/mongo/log
     : ADD START ACTIONS HERE
     ;;
 
   stop)
-    killall -9 mongod
+    killall -2 mongod
     : ADD STOP ACTIONS HERE
     ;;
 

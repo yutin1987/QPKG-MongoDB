@@ -140,9 +140,10 @@ pkg_post_install(){
   rm -rf $QPKG_DIR/bin
   if [ $(/usr/bin/expr match $(arch) "arm") -ne 0 ]; then
     echo "CPU is ARM use mongo_arm"
-    mv -f $QPKG_DIR/arm $QPKG_DIR/bib
+    mv -f $QPKG_DIR/arm $QPKG_DIR/bin
   else
     echo "CPU is x86 use mongo_x86"
     mv -f $QPKG_DIR/x86 $QPKG_DIR/bin
   fi;
+  chmod 770 $QPKG_DIR/bin/*
 }
