@@ -6,5 +6,5 @@ MongoDB (from "humongous") is an open-source document database, and the leading 
 MongoDB website: http://www.mongodb.org/
 
 Download:
-- [x86] http://bit.ly/qpkg_drupal7_qs
+- [x86] http://bit.ly/mongodb2_4_4
 - [arm] Unsupported
