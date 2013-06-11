@@ -5,6 +5,13 @@ MongoDB (from "humongous") is an open-source document database, and the leading 
 
 MongoDB website: http://www.mongodb.org/
 
+QPKG
+=========
+QPKG files/applications makes it easy for [QNAP](http://www.qnap.com/) Turbo NAS to install and remove packages.
+
 Download:
 - [x86] http://bit.ly/mongodb2_4_4
 - [arm] Unsupported
+
+=========
+![image](https://github.com/yutin1987/QPKG-MongoDB/raw/master/icon/mongodb_640x400.png)
