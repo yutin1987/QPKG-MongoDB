@@ -28,12 +28,24 @@ case "$1" in
 
     mkdir -p /mnt/ext/opt/mongo/db
     
-    mongod --dbpath=/mnt/ext/opt/mongo/db --fork --logpath /mnt/ext/opt/mongo/log
+    $QPKG_DIR/bin/mongod --dbpath=/mnt/ext/opt/mongo/db --fork --logpath /mnt/ext/opt/mongo/log
     : ADD START ACTIONS HERE
     ;;
 
   stop)
     killall -2 mongod
+
+    rm -f /opt/bin/mongod
+    rm -f /opt/bin/mongos
+    rm -f /opt/bin/mongo
+
+    rm -f /opt/bin/mongodump
+    rm -f /opt/bin/mongorestore
+    rm -f /opt/bin/mongoexport
+    rm -f /opt/bin/mongoimport
+    rm -f /opt/bin/mongofiles
+    rm -f /opt/bin/mongostat
+
     : ADD STOP ACTIONS HERE
     ;;
 
