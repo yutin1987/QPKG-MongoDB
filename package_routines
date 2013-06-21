@@ -138,7 +138,7 @@ pkg_post_install(){
   CONF=/etc/config/qpkg.conf
   QPKG_DIR=$(/sbin/getcfg $QPKG_NAME Install_Path -d "" -f $CONF)
   rm -rf $QPKG_DIR/bin
-  if [ $(/usr/bin/expr match $(arch) "arm") -ne 0 ]; then
+  if [ $(expr match "$(cat /proc/cpuinfo)" '.*ARM') -ne 0 ]; then
     echo "CPU is ARM use mongo_arm"
     mv -f $QPKG_DIR/arm $QPKG_DIR/bin
   else
