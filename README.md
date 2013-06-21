@@ -10,7 +10,7 @@ QPKG
 QPKG files/applications makes it easy for [QNAP](http://www.qnap.com/) Turbo NAS to install and remove packages.
 
 Download:
-- [x86] http://bit.ly/qpkg_mongodb
+- [x86] http://bit.ly/124z048
 - [arm] Unsupported
 
 =========
